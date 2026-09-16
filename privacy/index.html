@@ -1,65 +1,129 @@
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>有底｜隱私權政策</title>
-  <meta name="description" content="有底 App 隱私權政策">
+  <title>有底 | Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for 有底 Inventory">
   <style>
     :root{color-scheme:light dark;--bg:#f6f6f2;--card:#fff;--text:#202522;--muted:#69716c;--accent:#315b49;--line:#dfe4df}
-    @media (prefers-color-scheme:dark){:root{--bg:#151815;--card:#1d211e;--text:#f2f4f2;--muted:#aeb6b0;--accent:#8fc3a8;--line:#353c37}}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;line-height:1.75}
+    @media(prefers-color-scheme:dark){:root{--bg:#151815;--card:#1d211e;--text:#f2f4f2;--muted:#aeb6b0;--accent:#8fc3a8;--line:#353c37}}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;line-height:1.75}
     main{max-width:820px;margin:0 auto;padding:48px 20px 72px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
-    h1{font-size:2rem;line-height:1.25;margin:0 0 8px}h2{font-size:1.12rem;margin:30px 0 8px}p,li{font-size:1rem}.meta{color:var(--muted);margin:0 0 26px}.lead{font-size:1.04rem}.back{display:inline-block;margin-top:30px}a{color:var(--accent)}ul{padding-left:1.3rem}
+    h1{font-size:2rem;line-height:1.25;margin:0 0 8px}h2{font-size:1.12rem;margin:30px 0 8px}p,li{font-size:1rem}.meta{color:var(--muted);margin:0 0 26px}.lead{font-size:1.04rem}.back{display:inline-block;margin-top:30px}a{color:var(--accent)}ul{padding-left:1.3rem}.langbar{display:flex;gap:8px;justify-content:flex-end;margin-bottom:18px}.langbar button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer}.langbar button[aria-pressed="true"]{background:var(--text);color:var(--card)}[data-lang]{display:none}[data-lang].active{display:block}
   </style>
 </head>
 <body>
 <main>
   <article class="card">
-    <h1>有底隱私權政策</h1>
-    <p class="meta">適用版本：有底首發版本｜最後更新：2026 年 9 月 14 日</p>
-    <p class="lead">有底是一款給一人小店、工作室與手作坊使用的本機優先進出貨、庫存與成本記錄工具。本政策說明目前版本如何處理你在 App 內建立與保存的營運資料。</p>
+    <div class="langbar" aria-label="Language">
+      <button id="btn-en" type="button" onclick="setLang('en')">English</button>
+      <button id="btn-zh" type="button" onclick="setLang('zh-Hant')">繁體中文</button>
+    </div>
 
-    <h2>1. 你可能在 App 內輸入的資料</h2>
-    <p>依你的使用方式，有底可讓你自行建立帳本、商品與規格、廠商／客戶、進貨與出貨交易、數量、單價、備註、補貨提醒與其他經營記錄。</p>
-    <p>請只輸入經營管理真正需要的資訊；若內容涉及第三人的聯絡或商業資料，請依你所在地適用的法律及往來關係妥善處理。</p>
+    <section data-lang="en">
+      <h1>有底 Privacy Policy</h1>
+      <p class="meta">For 有底 1.1 (Build 2) | Last updated 16 Sep 2026</p>
+      <p class="lead">有底 is a local-first stock-in, stock-out, inventory and cost tracker for solo shops, studios and small businesses. This policy explains how the current version handles the business records you create and keep in the app.</p>
 
-    <h2>2. 資料保存位置</h2>
-    <p>目前版本不要求建立有底帳號，也沒有由有底開發者營運的伺服器用來接收你的帳本、商品或交易資料。主要營運資料保存在你的 iPhone 本機 App 儲存空間中。</p>
+      <h2>1. Information you may enter</h2>
+      <p>Depending on how you use 有底, you may create business books, items and variants, supplier/customer names, stock-in and stock-out transactions, quantities, unit prices, notes, restocking thresholds and related business records.</p>
+      <p>Please enter only information that is genuinely needed for your business. If you enter information relating to other people or businesses, handle it according to the laws and relationships that apply to you.</p>
 
-    <h2>3. 我們是否收集你的營運資料</h2>
-    <p>目前版本沒有廣告 SDK、第三方使用者行為分析 SDK 或追蹤 SDK，也沒有由開發者營運的網路 API 用來接收你的帳本與交易資料。因此，目前版本不會把你在 App 內建立的營運資料收集到開發者或廣告／分析合作夥伴的伺服器。</p>
+      <h2>2. Where your records are stored</h2>
+      <p>The current version does not require a 有底 account and does not use a server operated by the developer to receive your business books, items or transactions. Core business records are stored primarily in the app's local storage on your iPhone.</p>
 
-    <h2>4. CSV、分享與完整備份</h2>
-    <p>只有在你主動執行 CSV 匯出、完整備份或分享時，有底才會建立對應檔案，並交由 iOS 系統的分享或檔案介面，讓你自行選擇儲存位置或接收對象。</p>
-    <p>你另存到「檔案」、iCloud Drive、AirDrop 或其他第三方 App／服務的檔案，其後續保存、傳輸與刪除由你及所選服務管理，並受該服務自身政策約束。</p>
+      <h2>3. Developer collection of business records</h2>
+      <p>The current version does not include advertising SDKs, third-party behavioural analytics SDKs or tracking SDKs, and it does not use a developer-operated network API to receive your business books or transactions. The developer therefore does not collect those in-app business records onto developer, advertising or analytics servers in the current version.</p>
 
-    <h2>5. 備份恢復</h2>
-    <p>有底只會讀取你透過 iOS「檔案」選擇器主動選取的備份檔，並在 App 檢查資料、顯示必要提示且由你確認後才執行恢復。恢復可能取代目前本機資料，請在操作前確認所選檔案正確。</p>
+      <h2>4. CSV export, sharing and full backup</h2>
+      <p>When you choose CSV export, a full backup or sharing, 有底 creates the requested file and passes it to the iOS system interface so that you can choose where it is stored or sent.</p>
+      <p>Files that you save to Files, iCloud Drive, AirDrop or a third-party app/service are thereafter managed by you and the service you selected, subject to that service's own terms and privacy practices.</p>
 
-    <h2>6. 資料保留與刪除</h2>
-    <p>本機營運資料會保留在 App 的本機儲存空間中，直到你在 App 內修改或刪除相關資料、以備份覆蓋恢復、清除裝置／App 資料，或移除 App。</p>
-    <p>由你主動匯出的 CSV 或完整備份不會因為 App 內資料刪除而自動消失，請在對應的「檔案」、雲端空間或第三方 App 中自行管理。</p>
+      <h2>5. Backup restore</h2>
+      <p>有底 reads a backup only when you actively select it using the iOS Files picker. The app checks the backup and asks for confirmation before restoring it. A restore may replace current local data, so verify the file before proceeding.</p>
 
-    <h2>7. 追蹤、廣告與分析</h2>
-    <ul>
-      <li>目前版本不顯示第三方廣告。</li>
-      <li>不整合廣告追蹤 SDK。</li>
-      <li>不整合第三方使用者行為分析 SDK。</li>
-      <li>不使用你的營運資料建立跨 App 或網站的廣告追蹤個人檔案。</li>
-    </ul>
+      <h2>6. Retention and deletion</h2>
+      <p>Local business records remain in the app's local storage until you edit or delete them, restore a backup over them, erase the relevant device/app data, or remove the app.</p>
+      <p>CSV files or full backups that you previously exported are not automatically deleted when you remove records inside 有底. Manage those copies in Files, cloud storage or the third-party app where you saved them.</p>
 
-    <h2>8. 安全</h2>
-    <p>有底採取本機優先、使用者主動匯出／匯入與受控恢復等方式降低資料外流與誤覆蓋風險。沒有任何儲存方式可以保證絕對安全，請為 iPhone 設定安全的螢幕鎖定，並妥善保管你匯出的 CSV 與完整備份檔。</p>
+      <h2>7. Tracking, advertising and analytics</h2>
+      <ul>
+        <li>The current version does not display third-party advertising.</li>
+        <li>It does not integrate advertising-tracking SDKs.</li>
+        <li>It does not integrate third-party behavioural analytics SDKs.</li>
+        <li>It does not use your business records to build an advertising profile across apps or websites.</li>
+      </ul>
 
-    <h2>9. 政策更新</h2>
-    <p>如果未來版本新增帳號、雲端同步、第三方分析、廣告、付款後端或其他會改變資料處理方式的功能，我們會依實際版本更新本政策及 App Store 的隱私揭露。</p>
+      <h2>8. Security</h2>
+      <p>有底 uses a local-first design, user-initiated export/import and confirmed restore flows to reduce unnecessary transfer and accidental replacement of records. No storage method can guarantee absolute security. Protect your iPhone with an appropriate device lock and keep exported CSV and backup files in locations you trust.</p>
 
-    <h2>10. 聯絡方式</h2>
-    <p>若對隱私或資料處理有疑問，請寄信至：<a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a></p>
+      <h2>9. Future changes</h2>
+      <p>If a future version adds accounts, cloud sync, third-party analytics, advertising, payment back ends or other features that change how data is handled, this policy and the App Store privacy disclosures will be updated to match the actual version.</p>
 
-    <a class="back" href="../support/">前往有底支援頁面</a>
+      <h2>10. Contact</h2>
+      <p>Questions about privacy or data handling can be sent to <a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>.</p>
+      <a class="back" href="../support/?lang=en">Go to 有底 Support</a>
+    </section>
+
+    <section data-lang="zh-Hant">
+      <h1>有底隱私權政策</h1>
+      <p class="meta">適用版本：有底 1.1（Build 2）｜最後更新：2026 年 9 月 16 日</p>
+      <p class="lead">有底是一款給一人小店、工作室與小型經營者使用的本機優先進出貨、庫存與成本記錄工具。本政策說明目前版本如何處理你在 App 內建立與保存的營運資料。</p>
+
+      <h2>1. 你可能在 App 內輸入的資料</h2>
+      <p>依你的使用方式，有底可讓你自行建立帳本、商品與規格、廠商／客戶、進貨與出貨交易、數量、單價、備註、補貨提醒與其他經營記錄。</p>
+      <p>請只輸入經營管理真正需要的資訊；若內容涉及第三人的聯絡或商業資料，請依你所在地適用的法律及往來關係妥善處理。</p>
+
+      <h2>2. 資料保存位置</h2>
+      <p>目前版本不要求建立有底帳號，也沒有由有底開發者營運的伺服器用來接收你的帳本、商品或交易資料。主要營運資料保存在你的 iPhone 本機 App 儲存空間中。</p>
+
+      <h2>3. 我們是否收集你的營運資料</h2>
+      <p>目前版本沒有廣告 SDK、第三方使用者行為分析 SDK 或追蹤 SDK，也沒有由開發者營運的網路 API 用來接收你的帳本與交易資料。因此，目前版本不會把你在 App 內建立的營運資料收集到開發者或廣告／分析合作夥伴的伺服器。</p>
+
+      <h2>4. CSV、分享與完整備份</h2>
+      <p>只有在你主動執行 CSV 匯出、完整備份或分享時，有底才會建立對應檔案，並交由 iOS 系統的分享或檔案介面，讓你自行選擇儲存位置或接收對象。</p>
+      <p>你另存到「檔案」、iCloud Drive、AirDrop 或其他第三方 App／服務的檔案，其後續保存、傳輸與刪除由你及所選服務管理，並受該服務自身政策約束。</p>
+
+      <h2>5. 備份恢復</h2>
+      <p>有底只會讀取你透過 iOS「檔案」選擇器主動選取的備份檔，並在 App 檢查資料、顯示必要提示且由你確認後才執行恢復。恢復可能取代目前本機資料，請在操作前確認所選檔案正確。</p>
+
+      <h2>6. 資料保留與刪除</h2>
+      <p>本機營運資料會保留在 App 的本機儲存空間中，直到你在 App 內修改或刪除相關資料、以備份覆蓋恢復、清除裝置／App 資料，或移除 App。</p>
+      <p>由你主動匯出的 CSV 或完整備份不會因為 App 內資料刪除而自動消失，請在對應的「檔案」、雲端空間或第三方 App 中自行管理。</p>
+
+      <h2>7. 追蹤、廣告與分析</h2>
+      <ul>
+        <li>目前版本不顯示第三方廣告。</li>
+        <li>不整合廣告追蹤 SDK。</li>
+        <li>不整合第三方使用者行為分析 SDK。</li>
+        <li>不使用你的營運資料建立跨 App 或網站的廣告追蹤個人檔案。</li>
+      </ul>
+
+      <h2>8. 安全</h2>
+      <p>有底採取本機優先、使用者主動匯出／匯入與受控恢復等方式降低資料外流與誤覆蓋風險。沒有任何儲存方式可以保證絕對安全，請為 iPhone 設定安全的螢幕鎖定，並妥善保管你匯出的 CSV 與完整備份檔。</p>
+
+      <h2>9. 政策更新</h2>
+      <p>如果未來版本新增帳號、雲端同步、第三方分析、廣告、付款後端或其他會改變資料處理方式的功能，我們會依實際版本更新本政策及 App Store 的隱私揭露。</p>
+
+      <h2>10. 聯絡方式</h2>
+      <p>若對隱私或資料處理有疑問，請寄信至：<a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a></p>
+      <a class="back" href="../support/?lang=zh-Hant">前往有底支援頁面</a>
+    </section>
   </article>
 </main>
+<script>
+(function(){
+  const q=new URLSearchParams(location.search).get('lang');
+  const n=(navigator.language||'').toLowerCase();
+  setLang(q==='zh-Hant'||q==='zh-hant'||(!q&&n.startsWith('zh'))?'zh-Hant':'en');
+})();
+function setLang(lang){
+  document.documentElement.lang=lang==='zh-Hant'?'zh-Hant-TW':'en';
+  document.querySelectorAll('[data-lang]').forEach(x=>x.classList.toggle('active',x.dataset.lang===lang));
+  document.getElementById('btn-en').setAttribute('aria-pressed',String(lang==='en'));
+  document.getElementById('btn-zh').setAttribute('aria-pressed',String(lang==='zh-Hant'));
+}
+</script>
 </body>
 </html>

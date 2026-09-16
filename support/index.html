@@ -1,79 +1,96 @@
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>有底｜支援與聯絡</title>
-  <meta name="description" content="有底 App 支援與聯絡資訊">
+  <title>有底 | Support & Contact</title>
+  <meta name="description" content="Support and contact information for 有底 Inventory">
   <style>
     :root{color-scheme:light dark;--bg:#f6f6f2;--card:#fff;--text:#202522;--muted:#69716c;--accent:#315b49;--line:#dfe4df}
-    @media (prefers-color-scheme:dark){:root{--bg:#151815;--card:#1d211e;--text:#f2f4f2;--muted:#aeb6b0;--accent:#8fc3a8;--line:#353c37}}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;line-height:1.75}
+    @media(prefers-color-scheme:dark){:root{--bg:#151815;--card:#1d211e;--text:#f2f4f2;--muted:#aeb6b0;--accent:#8fc3a8;--line:#353c37}}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;line-height:1.75}
     main{max-width:820px;margin:0 auto;padding:48px 20px 72px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
-    h1{font-size:2rem;line-height:1.25;margin:0 0 8px}h2{font-size:1.12rem;margin:30px 0 8px}p,li{font-size:1rem}.meta{color:var(--muted);margin:0 0 26px}.faq{padding:18px 0;border-top:1px solid var(--line)}.faq:first-of-type{border-top:0}.notice{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:24px 0;background:color-mix(in srgb,var(--card) 92%,var(--accent) 8%)}a{color:var(--accent)}ol{padding-left:1.3rem}
+    h1{font-size:2rem;line-height:1.25;margin:0 0 8px}h2{font-size:1.12rem;margin:30px 0 8px}p,li{font-size:1rem}.meta{color:var(--muted);margin:0 0 26px}.faq{padding:18px 0;border-top:1px solid var(--line)}.faq:first-of-type{border-top:0}.notice{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:24px 0;background:color-mix(in srgb,var(--card) 92%,var(--accent) 8%)}a{color:var(--accent)}ol{padding-left:1.3rem}.langbar{display:flex;gap:8px;justify-content:flex-end;margin-bottom:18px}.langbar button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer}.langbar button[aria-pressed="true"]{background:var(--text);color:var(--card)}[data-lang]{display:none}[data-lang].active{display:block}.contact-grid{display:grid;grid-template-columns:140px 1fr;gap:6px 14px}.gate{color:#9b5e00;font-weight:600}
   </style>
 </head>
 <body>
 <main>
   <article class="card">
-    <h1>有底｜支援與聯絡</h1>
-    <p class="meta">適用版本：有底首發版本｜最後更新：2026 年 9 月 14 日</p>
-    <p>有底是給一人小店、工作室與手作坊使用的輕量進出貨、庫存與成本記錄工具。如果你遇到問題，可用 Email 文字說明；如有需要，也可以附上截圖或錄屏。</p>
-
-    <div class="notice">
-      <strong>聯絡支援：</strong>
-      <a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>
+    <div class="langbar" aria-label="Language">
+      <button id="btn-en" type="button" onclick="setLang('en')">English</button>
+      <button id="btn-zh" type="button" onclick="setLang('zh-Hant')">繁體中文</button>
     </div>
 
-    <h2>回報問題時，建議附上</h2>
-    <ol>
-      <li>有底版本與 Build（可在 App 內「更多／關於」查看）。</li>
-      <li>發生問題前正在做什麼，例如新增進貨、出貨、查看庫存、修改商品、匯出 CSV、完整備份或恢復。</li>
-      <li>畫面上的提示文字、截圖或錄屏。</li>
-      <li>問題在重新開啟 App 後是否仍存在。</li>
-    </ol>
-    <p>為保護隱私與商業資料，請不要主動寄送完整客戶／廠商資料、銀行或付款資訊，或整份完整備份。若需要進一步檢查，我們會先說明最小必要資訊。</p>
-
-    <h2>常見問題</h2>
-
-    <section class="faq">
-      <strong>資料會自動上傳嗎？</strong>
-      <p>目前版本主要將帳本、商品、交易與設定保存在你的 iPhone 本機，不會把這些營運資料自動上傳到開發者自建伺服器。只有你主動匯出、備份或分享時，檔案才會交由 iOS 系統讓你選擇目的地。</p>
+    <section data-lang="en">
+      <h1>有底 | Support & Contact</h1>
+      <p class="meta">For 有底 1.1 (Build 2) | Last updated 16 Sep 2026</p>
+      <p>有底 is a lightweight stock-in, stock-out, inventory and cost tracker for solo shops, studios and small businesses. If something is not working as expected, email us with a short description. Screenshots or a screen recording are welcome when useful.</p>
+      <div class="notice">
+        <div class="contact-grid">
+          <strong>Email</strong><a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>
+          <strong>Legal address</strong><span>5F., No. 14, Aly. 6, Ln. 85, Sec. 1, Baoyuan Rd., New Taipei City 231027, Taiwan</span>
+          <strong>Telephone</strong><a href="tel:+8618620905453">+86 186 2090 5453</a>
+        </div>
+      </div>
+      <h2>When reporting an issue</h2>
+      <ol>
+        <li>Include the 有底 version and build shown in More / About.</li>
+        <li>Describe what you were doing, such as recording stock in/out, checking inventory, editing an item, exporting CSV, creating a full backup or restoring one.</li>
+        <li>Include the on-screen message, screenshot or screen recording if it helps.</li>
+        <li>Tell us whether the issue still happens after reopening the app.</li>
+      </ol>
+      <p>To protect privacy and business information, please do not proactively send complete customer/supplier lists, banking or payment information, or a full backup file. If deeper troubleshooting is needed, we will first explain the minimum information required.</p>
+      <h2>Frequently asked questions</h2>
+      <section class="faq"><strong>Does 有底 upload my business records automatically?</strong><p>No. The current version stores your business books, items, transactions and settings primarily on your iPhone. It does not automatically upload those records to a server operated by the developer. Files leave the app only when you choose to export, back up or share them through iOS.</p></section>
+      <section class="faq"><strong>What is the difference between CSV export and a full backup?</strong><p>CSV is intended for viewing transaction data in spreadsheets or other tools. A full backup is for restoring 有底 data later. CSV does not replace a full backup.</p></section>
+      <section class="faq"><strong>How do I create a full backup?</strong><p>Open More and choose the full-backup action, then choose a storage location in the iOS interface. Keep a recent backup before changing phones or making major data changes.</p></section>
+      <section class="faq"><strong>How do I restore a backup?</strong><p>Open More, choose restore, and select a valid backup using the iOS Files picker. 有底 checks the file and asks for confirmation before restoring.</p></section>
+      <section class="faq"><strong>How do low-stock reminders work?</strong><p>Set a replenishment threshold in item settings. The inventory screen marks items that should be restocked using text and an icon, not colour alone.</p></section>
+      <section class="faq"><strong>Does the current version require an account, contain ads or use subscriptions?</strong><p>No 有底 account is required. The current version does not include third-party ads or third-party behavioural analytics SDKs. Commercial terms are always those shown on the App Store for the version you download.</p></section>
+      <h2>Privacy</h2><p><a href="../privacy/?lang=en">Read the 有底 Privacy Policy</a></p>
     </section>
 
-    <section class="faq">
-      <strong>CSV 匯出和完整備份有什麼不同？</strong>
-      <p>CSV 適合把交易資料帶到試算表或其他工具查看；完整備份則用於日後恢復 App 資料。CSV 不能取代完整備份。</p>
+    <section data-lang="zh-Hant">
+      <h1>有底｜支援與聯絡</h1>
+      <p class="meta">適用版本：有底 1.1（Build 2）｜最後更新：2026 年 9 月 16 日</p>
+      <p>有底是給一人小店、工作室與小型經營者使用的輕量進出貨、庫存與成本記錄工具。如果遇到問題，可用 Email 文字說明；需要時也可以附上截圖或錄屏。</p>
+      <div class="notice">
+        <div class="contact-grid">
+          <strong>Email</strong><a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>
+          <strong>公開法律／營業地址</strong><span>5F., No. 14, Aly. 6, Ln. 85, Sec. 1, Baoyuan Rd., New Taipei City 231027, Taiwan</span>
+          <strong>公開聯絡電話</strong><a href="tel:+8618620905453">+86 186 2090 5453</a>
+        </div>
+      </div>
+      <h2>回報問題時，建議附上</h2>
+      <ol>
+        <li>有底版本與 Build（可在 App 內「更多／關於」查看）。</li>
+        <li>發生問題前正在做什麼，例如新增進貨、出貨、查看庫存、修改商品、匯出 CSV、完整備份或恢復。</li>
+        <li>畫面上的提示文字、截圖或錄屏。</li>
+        <li>問題在重新開啟 App 後是否仍存在。</li>
+      </ol>
+      <p>為保護隱私與商業資料，請不要主動寄送完整客戶／廠商資料、銀行或付款資訊，或整份完整備份。若需要進一步檢查，我們會先說明最小必要資訊。</p>
+      <h2>常見問題</h2>
+      <section class="faq"><strong>資料會自動上傳嗎？</strong><p>不會。目前版本主要將帳本、商品、交易與設定保存在你的 iPhone 本機，不會把這些營運資料自動上傳到開發者自建伺服器。只有你主動匯出、備份或分享時，檔案才會交由 iOS 系統讓你選擇目的地。</p></section>
+      <section class="faq"><strong>CSV 匯出和完整備份有什麼不同？</strong><p>CSV 適合把交易資料帶到試算表或其他工具查看；完整備份則用於日後恢復 App 資料。CSV 不能取代完整備份。</p></section>
+      <section class="faq"><strong>如何建立與恢復完整備份？</strong><p>在「更多」中建立完整備份；恢復時透過 iOS「檔案」選擇器挑選有效備份檔。有底會先檢查資料並在你確認後才執行恢復。</p></section>
+      <section class="faq"><strong>庫存不足時怎麼看？</strong><p>可在商品設定中調整補貨提醒數量；庫存頁會以文字與圖示標示待補貨狀態，不只依賴顏色判斷。</p></section>
+      <section class="faq"><strong>目前有帳號登入、廣告或訂閱嗎？</strong><p>目前不需要有底帳號登入，也沒有第三方廣告或第三方使用者行為分析 SDK。實際商業方式以 App Store 當下版本頁面為準。</p></section>
+      <h2>隱私權</h2><p><a href="../privacy/?lang=zh-Hant">查看有底隱私權政策</a></p>
     </section>
-
-    <section class="faq">
-      <strong>如何建立完整備份？</strong>
-      <p>在「更多」中選擇完整備份，再由 iOS 系統介面選擇儲存位置。建議在換手機、重大資料調整或定期整理前保留一份最新備份。</p>
-    </section>
-
-    <section class="faq">
-      <strong>如何恢復備份？</strong>
-      <p>在「更多」中選擇恢復備份，透過 iOS「檔案」選擇器挑選先前建立的有效備份檔。App 會在你確認後才執行恢復，因此請先核對所選檔案與目前資料。</p>
-    </section>
-
-    <section class="faq">
-      <strong>庫存不足時怎麼看？</strong>
-      <p>可在商品設定中調整補貨提醒數量；庫存頁會以文字與圖示標示待補貨狀態，不只依賴顏色判斷。</p>
-    </section>
-
-    <section class="faq">
-      <strong>平均成本與庫存成本是什麼？</strong>
-      <p>有底會依目前 App 的成本規則整理商品的平均成本與庫存成本，讓你在庫存頁快速核對。若發現數字與實際交易不符，請先確認相關進貨／出貨紀錄，再附上最小必要畫面聯絡支援。</p>
-    </section>
-
-    <section class="faq">
-      <strong>目前有帳號登入、廣告或訂閱嗎？</strong>
-      <p>目前首發版本沒有有底帳號登入、第三方廣告或第三方使用者行為分析 SDK。是否採用付費下載或其他商業方式，以 App Store 當下實際上架版本為準。</p>
-    </section>
-
-    <h2>隱私權</h2>
-    <p><a href="../privacy/">查看有底隱私權政策</a></p>
   </article>
 </main>
+<script>
+(function(){
+  const q=new URLSearchParams(location.search).get('lang');
+  const n=(navigator.language||'').toLowerCase();
+  setLang(q==='zh-Hant'||q==='zh-hant'||(!q&&n.startsWith('zh'))?'zh-Hant':'en');
+})();
+function setLang(lang){
+  document.documentElement.lang=lang==='zh-Hant'?'zh-Hant-TW':'en';
+  document.querySelectorAll('[data-lang]').forEach(x=>x.classList.toggle('active',x.dataset.lang===lang));
+  document.getElementById('btn-en').setAttribute('aria-pressed',String(lang==='en'));
+  document.getElementById('btn-zh').setAttribute('aria-pressed',String(lang==='zh-Hant'));
+}
+</script>
 </body>
 </html>
