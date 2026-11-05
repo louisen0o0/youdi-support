@@ -23,91 +23,135 @@
 
     <section data-lang="en">
       <h1>有底 Privacy Policy</h1>
-      <p class="meta">For 有底 1.1 (Build 2) | Last updated 16 Sep 2026</p>
-      <p class="lead">有底 is a local-first stock-in, stock-out, inventory and cost tracker for solo shops, studios and small businesses. This policy explains how the current version handles the business records you create and keep in the app.</p>
+      <p class="meta">For 有底 1.6 (Build 18) | Last updated 5 November 2026</p>
+      <p class="lead">We built 有底 (InventoryLite) to help solo shop owners, market stall vendors, independent studios, and small sellers track inventory, stock movements, moving-average costs, and gross profits on iPhone without complication. Your business data belongs to you. This privacy policy explains in plain language what stays on your device, how exports and backups work, and how our optional product analytics feature in version 1.6 operates.</p>
 
-      <h2>1. Information you may enter</h2>
-      <p>Depending on how you use 有底, you may create business books, items and variants, supplier/customer names, stock-in and stock-out transactions, quantities, unit prices, notes, restocking thresholds and related business records.</p>
-      <p>Please enter only information that is genuinely needed for your business. If you enter information relating to other people or businesses, handle it according to the laws and relationships that apply to you.</p>
+      <h2>Business Records You Enter into the App</h2>
+      <p>有底 (InventoryLite) is designed for solo shops, market stalls, independent studios, and small sellers to track inventory, stock-in and stock-out movements, moving-average costs, and gross profit. Depending on how you use the app, you may choose to enter business records such as books, items, variant details, supplier and customer names, stock transactions, quantities, unit prices, notes, and restock alert thresholds.</p>
+      <p>We encourage you to record only what your business genuinely needs. If you record names or contact details of customers, suppliers, or partners, please ensure you handle and maintain their information lawfully and responsibly.</p>
 
-      <h2>2. Where your records are stored</h2>
-      <p>The current version does not require a 有底 account and does not use a server operated by the developer to receive your business books, items or transactions. Core business records are stored primarily in the app's local storage on your iPhone.</p>
+      <h2>Where Your Data Lives: Local Storage on Your iPhone</h2>
+      <p>You do not need an account or login to use 有底. The app is built specifically for iPhone running iOS 17 or later (there is no iPad support).</p>
+      <p>All your core business records—including your ledger books, stock items, cost calculations, profit margins, and notes—are stored primarily in the app&#x27;s local storage directly on your iPhone. We do not provide or operate any cloud synchronization service for your ledger records, and we do not maintain a remote database containing your books.</p>
+      <p>The only developer-operated network endpoint in version 1.6 is our optional product analytics endpoint, which never receives, processes, or stores any of your business records.</p>
 
-      <h2>3. Developer collection of business records</h2>
-      <p>The current version does not include advertising SDKs, third-party behavioural analytics SDKs or tracking SDKs, and it does not use a developer-operated network API to receive your business books or transactions. The developer therefore does not collect those in-app business records onto developer, advertising or analytics servers in the current version.</p>
-
-      <h2>4. CSV export, sharing and full backup</h2>
-      <p>When you choose CSV export, a full backup or sharing, 有底 creates the requested file and passes it to the iOS system interface so that you can choose where it is stored or sent.</p>
-      <p>Files that you save to Files, iCloud Drive, AirDrop or a third-party app/service are thereafter managed by you and the service you selected, subject to that service's own terms and privacy practices.</p>
-
-      <h2>5. Backup restore</h2>
-      <p>有底 reads a backup only when you actively select it using the iOS Files picker. The app checks the backup and asks for confirmation before restoring it. A restore may replace current local data, so verify the file before proceeding.</p>
-
-      <h2>6. Retention and deletion</h2>
-      <p>Local business records remain in the app's local storage until you edit or delete them, restore a backup over them, erase the relevant device/app data, or remove the app.</p>
-      <p>CSV files or full backups that you previously exported are not automatically deleted when you remove records inside 有底. Manage those copies in Files, cloud storage or the third-party app where you saved them.</p>
-
-      <h2>7. Tracking, advertising and analytics</h2>
+      <h2>Optional Product Analytics in Version 1.6</h2>
+      <p>Version 1.6 includes one optional first-party analytics feature created solely to help us understand where users encounter friction or abandon the Pro purchase flow, allowing us to improve the app. It is completely off by default. The app never records, queues, or transmits any analytics data before you explicitly grant consent.</p>
+      <p>On your first launch of version 1.6, a one-time explanation sheet titled &quot;Help Us Improve the App&quot; asks whether you wish to agree or decline. This explanation is shown only once, and if you decline, your choice is remembered. You can change your mind at any time by navigating to Settings &gt; Privacy &gt; Help Improve App.</p>
+      <p>If you turn the switch off, the app immediately ceases recording events, removes any unsent events queued on your iPhone, and cancels any network request in progress. Turning off or declining analytics will never limit, alter, or revoke any app feature or purchased rights. The app remains fully functional, and you can opt back in at any time.</p>
+      <p>When enabled, analytics events are transmitted over HTTPS POST to <a href="https://a21-funnel.fivechaoice.workers.dev/a21/funnel">https://a21-funnel.fivechaoice.workers.dev/a21/funnel</a>. This endpoint runs on Cloudflare Workers backed by a Cloudflare D1 database, where Cloudflare processes requests on our behalf. The endpoint returns an HTTP 204 status with no response body. If your device is offline, the app queues events locally (up to 500 events; the oldest are dropped if the limit is exceeded) and transmits them in chronological order once an internet connection is established. Delivered events are immediately deleted from your local queue.</p>
+      <p>The analytics events we collect are strictly anonymous and are never linked to your personal identity. We do not collect or transmit device identifiers, user identifiers, installation UUIDs, IDFA, IDFV, Apple IDs, email addresses, phone numbers, location coordinates, photos, contacts, microphone audio, or clipboard content. The endpoint does not log or store IP addresses, User-Agent strings, or cookies. We never use analytics data for advertising, cross-app tracking, or cross-site tracking, we do not build advertising profiles, and we never sell your data to third parties.</p>
+      <p>On our server, we store only aggregated counter rows keyed by the dimension combination: date × event × source × app version × country × country source × free/pro tier × new/legacy cohort × install week. There is no database table for raw events, request payloads, IP addresses, User-Agents, or cookies. A daily automated maintenance task permanently deletes server counter rows older than 13 months. Because server rows consist exclusively of aggregate counts untied to any personal identifier, we cannot isolate, look up, or delete past counts for any individual person. Turning the analytics switch off stops all future collection and purges any unsent data from your device.</p>
+      <p>Below is the complete whitelist of exact fields that can be sent when you opt in. No other fields are ever transmitted:</p>
       <ul>
-        <li>The current version does not display third-party advertising.</li>
-        <li>It does not integrate advertising-tracking SDKs.</li>
-        <li>It does not integrate third-party behavioural analytics SDKs.</li>
-        <li>It does not use your business records to build an advertising profile across apps or websites.</li>
+        <li>event: The name of the specific in-app step. Supported events are first_open, product_1, product_5, product_10, product_30, limit_hit_first, pro_seen_first, paywall_open_first, purchase_start_first, purchase_success, purchase_cancel_first, purchase_fail_first, restore_success, consent_shown, consent_yes, and paywall_open_total. Product count events (product_1/5/10/30) indicate you have recorded that number of products; consent bookkeeping events (consent_shown, consent_yes) are only ever transmitted after consent is granted; and paywall_open_total represents an overall heat count rather than a conversion denominator.</li>
+        <li>day: The UTC calendar date when the event occurred, formatted as YYYY-MM-DD. Only the calendar day is transmitted—never an exact time or time zone.</li>
+        <li>app_version: The app version and build number when the event was recorded, for example 1.6(18).</li>
+        <li>country: The App Store storefront country code, or the device region code if the storefront code is unavailable.</li>
+        <li>country_src: Indicates the source of the country code, with a value of either &quot;storefront&quot; or &quot;locale&quot;.</li>
+        <li>tier: Indicates your current app tier, with a value of either &quot;free&quot; or &quot;pro&quot;.</li>
+        <li>cohort: Indicates whether this installation is &quot;new&quot; or &quot;legacy&quot; (reflecting whether the app was used prior to the current version).</li>
+        <li>install_week: The ISO calendar week of the app&#x27;s first launch after installation, for example 2026-W44. Only the week is transmitted, never the exact day.</li>
+        <li>source: Transmitted solely for Pro-screen and paywall events, with a value of &quot;limit&quot;, &quot;insight_entry&quot;, &quot;intro&quot;, or &quot;settings&quot;. This field is omitted for all other events.</li>
       </ul>
 
-      <h2>8. Security</h2>
-      <p>有底 uses a local-first design, user-initiated export/import and confirmed restore flows to reduce unnecessary transfer and accidental replacement of records. No storage method can guarantee absolute security. Protect your iPhone with an appropriate device lock and keep exported CSV and backup files in locations you trust.</p>
+      <h2>CSV Export, Full Backups, and File Sharing</h2>
+      <p>All core inventory, stock tracking, cost calculation, backup, and export features work locally and offline. You can export your data to CSV spreadsheets or create a full JSON ledger backup whenever you wish.</p>
+      <p>CSV exports, full backups, and sharing occur solely when you explicitly initiate them using the native iOS share sheet or Files interface. You decide where to save or share your files—such as the Files app, iCloud Drive, AirDrop, or external communication and storage services.</p>
+      <p>Once an exported file or backup leaves 有底, its storage, transmission, and privacy are governed by the terms and privacy policies of the third-party service or storage provider you selected.</p>
 
-      <h2>9. Future changes</h2>
-      <p>If a future version adds accounts, cloud sync, third-party analytics, advertising, payment back ends or other features that change how data is handled, this policy and the App Store privacy disclosures will be updated to match the actual version.</p>
+      <h2>Restoring Data from a Backup</h2>
+      <p>You can restore your ledgers from a previously created full backup file at any time. Restoration is completely under your manual control: the app reads a backup file only when you explicitly select it through the iOS file picker.</p>
+      <p>To prevent unintended data loss, 有底 always presents a clear confirmation prompt before replacing your local device records with the contents of the chosen backup file.</p>
 
-      <h2>10. Contact</h2>
-      <p>Questions about privacy or data handling can be sent to <a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>.</p>
+      <h2>Data Retention and Deletion</h2>
+      <p>Your local business records remain on your iPhone for as long as you keep the app installed, or until you choose to delete specific transactions, items, or books within the app. If you delete 有底 from your iPhone, iOS permanently deletes the app&#x27;s local sandbox and all stored records.</p>
+      <p>Files you have exported or backed up outside the app remain in your chosen destinations (such as the Files app, iCloud Drive, or external drives) until you manually remove them.</p>
+      <p>For the optional product analytics, server-side aggregate tally rows are automatically deleted after 13 months by our scheduled daily maintenance routine.</p>
+
+      <h2>No Third-Party Tracking or Advertising</h2>
+      <p>We believe business tools should remain clean and confidential. 有底 does not integrate any third-party advertising SDKs, third-party behavioral analytics SDKs, or commercial tracking frameworks.</p>
+      <p>We do not track your activity across other companies&#x27; apps or websites, we do not monitor your behavior for advertising purposes, and we never construct advertising profiles from your inventory, costs, or sales data.</p>
+      <p>The only analytics in 有底 is the optional, first-party product analytics described in this policy, which operates strictly on anonymous event milestones and only after your explicit consent.</p>
+
+      <h2>Data Security</h2>
+      <p>We protect your business information primarily through our local-first design: because your ledger records remain stored on your iPhone rather than on an external cloud server, they are not susceptible to remote server breaches or centralized database leaks.</p>
+      <p>Your local app data is protected by iOS&#x27;s built-in data protection, especially when you set a device passcode. You can also use Face ID or Touch ID to control access. To keep your information safe, we recommend keeping iOS updated, setting a strong passcode, and handling any exported CSV or backup files carefully.</p>
+      <p>Please note that while we design our systems with security and care, no digital storage medium or electronic transmission method can be guaranteed to be absolutely secure.</p>
+
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may periodically update this privacy policy to reflect improvements to 有底, operational updates, or changes in applicable legal standards.</p>
+      <p>If we make changes to how data is handled, we will update the &quot;Last updated&quot; date at the top of this document, revise our App Store privacy disclosures, and share relevant details in release notes or within the app.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feedback, or concerns regarding this privacy policy or our data practices, please contact us by email at <a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>. We are glad to assist you.</p>
       <a class="back" href="../support/?lang=en">Go to 有底 Support</a>
     </section>
 
     <section data-lang="zh-Hant">
       <h1>有底隱私權政策</h1>
-      <p class="meta">適用版本：有底 1.1（Build 2）｜最後更新：2026 年 9 月 16 日</p>
-      <p class="lead">有底是一款給一人小店、工作室與小型經營者使用的本機優先進出貨、庫存與成本記錄工具。本政策說明目前版本如何處理你在 App 內建立與保存的營運資料。</p>
+      <p class="meta">適用版本：有底 1.6（Build 18）｜最後更新：2026 年 11 月 5 日</p>
+      <p class="lead">我們開發「有底」（InventoryLite），是為了讓個人店家、市集攤主、手作工作室與獨立賣家能在 iPhone 上俐落管理庫存、進出貨、移動加權平均成本與掌握毛利。你的生意資料完全屬於你。這份隱私權政策以清楚、坦誠的方式，說明你的帳目資料如何保存在本機、備份與匯出的運作機制，以及 1.6 版本中選擇性加入的產品體驗改進統計。</p>
 
-      <h2>1. 你可能在 App 內輸入的資料</h2>
-      <p>依你的使用方式，有底可讓你自行建立帳本、商品與規格、廠商／客戶、進貨與出貨交易、數量、單價、備註、補貨提醒與其他經營記錄。</p>
-      <p>請只輸入經營管理真正需要的資訊；若內容涉及第三人的聯絡或商業資料，請依你所在地適用的法律及往來關係妥善處理。</p>
+      <h2>你在 App 中記錄的業務資料</h2>
+      <p>「有底」（InventoryLite）專為日常進銷存管理而設計。在使用過程中，你可能會在 App 內建立各項業務帳目，例如帳本、商品名稱、款式規格、廠商與客戶名稱、進出貨紀錄、交易數量、進貨單價與售價、備註說明，以及庫存警示門檻。</p>
+      <p>我們建議你僅記錄營運所需的必要資料。若你在帳本中記錄了客戶、廠商或合作夥伴的個人資訊，請務必依循相關法規，妥善且合法地管理與使用這些資訊。</p>
 
-      <h2>2. 資料保存位置</h2>
-      <p>目前版本不要求建立有底帳號，也沒有由有底開發者營運的伺服器用來接收你的帳本、商品或交易資料。主要營運資料保存在你的 iPhone 本機 App 儲存空間中。</p>
+      <h2>資料儲存位置：你的 iPhone 本機</h2>
+      <p>使用「有底」無須註冊任何帳號，也不需要登入。本 App 專為搭載 iOS 17 或更新版本的 iPhone 設計（未提供 iPad 版本）。</p>
+      <p>你的所有核心業務紀錄——包括帳本、商品庫存、進出貨紀錄、成本計算、毛利與備註——皆主要保存在你 iPhone 的本機應用程式儲存空間中。開發者並未提供亦未營運任何帳本雲端同步服務，我們也沒有儲存你業務帳目的中央伺服器。</p>
+      <p>在 1.6 版本中，唯一的開發者自營網路端點是選擇性的體驗改進統計端點，且該端點絕不會接收、處理或儲存任何業務帳目資料。</p>
 
-      <h2>3. 我們是否收集你的營運資料</h2>
-      <p>目前版本沒有廣告 SDK、第三方使用者行為分析 SDK 或追蹤 SDK，也沒有由開發者營運的網路 API 用來接收你的帳本與交易資料。因此，目前版本不會把你在 App 內建立的營運資料收集到開發者或廣告／分析合作夥伴的伺服器。</p>
-
-      <h2>4. CSV、分享與完整備份</h2>
-      <p>只有在你主動執行 CSV 匯出、完整備份或分享時，有底才會建立對應檔案，並交由 iOS 系統的分享或檔案介面，讓你自行選擇儲存位置或接收對象。</p>
-      <p>你另存到「檔案」、iCloud Drive、AirDrop 或其他第三方 App／服務的檔案，其後續保存、傳輸與刪除由你及所選服務管理，並受該服務自身政策約束。</p>
-
-      <h2>5. 備份恢復</h2>
-      <p>有底只會讀取你透過 iOS「檔案」選擇器主動選取的備份檔，並在 App 檢查資料、顯示必要提示且由你確認後才執行恢復。恢復可能取代目前本機資料，請在操作前確認所選檔案正確。</p>
-
-      <h2>6. 資料保留與刪除</h2>
-      <p>本機營運資料會保留在 App 的本機儲存空間中，直到你在 App 內修改或刪除相關資料、以備份覆蓋恢復、清除裝置／App 資料，或移除 App。</p>
-      <p>由你主動匯出的 CSV 或完整備份不會因為 App 內資料刪除而自動消失，請在對應的「檔案」、雲端空間或第三方 App 中自行管理。</p>
-
-      <h2>7. 追蹤、廣告與分析</h2>
+      <h2>1.6 版本選擇性參與的產品體驗改進統計</h2>
+      <p>為了了解使用者在 Pro 方案探索與購買流程中於哪些環節遇到阻礙，進而持續改良 App 體驗，「有底」在 1.6 版本中加入了選擇性的第一方統計功能。此功能預設為關閉狀態。在你明確同意啟用之前，App 絕不會記錄、排隊或傳送任何統計資料。</p>
+      <p>當你首次開啟 1.6 版本時，App 會顯示一次性說明頁面「協助改進 App」，邀請你決定是否同意參與。該說明僅顯示一次；若你選擇婉拒，系統會記住你的選擇，不再主動打擾。你可以隨時在「設定 &gt; 隱私與改進 &gt; 協助改進 App」開啟或關閉此功能。</p>
+      <p>若你關閉此開關，App 會立即停止記錄事件、清空 iPhone 本機上所有排隊待傳送的事件，並取消正在進行中的網路請求。婉拒或關閉此統計開關絕不會影響任何 App 功能或你已購買的權益，所有功能皆維持正常使用，日後亦可隨時重新開啟。</p>
+      <p>啟用統計後，事件會透過 HTTPS POST 傳送至 <a href="https://a21-funnel.fivechaoice.workers.dev/a21/funnel">https://a21-funnel.fivechaoice.workers.dev/a21/funnel</a>。此端點運行於 Cloudflare Workers，後端搭配 Cloudflare D1 資料庫，由 Cloudflare 代表開發者處理請求，並回傳 HTTP 204 無內文狀態。若裝置處於離線狀態，App 會將事件暫存於本機佇列（上限為 500 筆，若額滿則自動優先丟棄最舊記錄），待網路連線恢復後依序送出；傳送成功的事件會立即自本機佇列刪除。</p>
+      <p>我們收集的統計事件純屬匿名，絕不與你的個人身分連結。我們不收集亦不傳送任何裝置識別碼、使用者識別碼、安裝 UUID、IDFA、IDFV、Apple ID、電子郵件、電話號碼、地理位置座標、相簿照片、通訊錄、麥克風錄音或剪貼簿內容。端點亦不記錄或儲存 IP 位址、User-Agent 字串或 Cookie。我們絕不將資料用於廣告投放、跨 App 或跨網站追蹤，不建立廣告畫像，也絕不向第三方販售資料。</p>
+      <p>在伺服器端，我們僅儲存交叉統計後的聚合計數列，維度包含：日期 × 事件 × 來源 × App 版本 × 國別 × 國別來源 × 免費/Pro 方案 × 新舊組群 × 安裝週別。資料庫中完全沒有原始事件記錄、請求內文、IP 位址、User-Agent 或 Cookie 的資料表。每日的自動排程維護作業會自動刪除超過 13 個月的過期計數列。由於伺服器端僅保存去識別化的整體計數數字，不含任何可識別特定個人的標記，因此我們無法單獨篩選、調閱或刪除特定使用者過去的統計計數。關閉 App 內的開關可立即停止未來的資料收集，並清空你手機上所有未傳送的事件。</p>
+      <p>以下為同意啟用時傳送的完整白名單欄位，絕不包含其他任何欄位，供你檢視查核：</p>
       <ul>
-        <li>目前版本不顯示第三方廣告。</li>
-        <li>不整合廣告追蹤 SDK。</li>
-        <li>不整合第三方使用者行為分析 SDK。</li>
-        <li>不使用你的營運資料建立跨 App 或網站的廣告追蹤個人檔案。</li>
+        <li>event：App 內部操作步驟名稱。支援的事件包含 first_open、product_1、product_5、product_10、product_30、limit_hit_first、pro_seen_first、paywall_open_first、purchase_start_first、purchase_success、purchase_cancel_first、purchase_fail_first、restore_success、consent_shown、consent_yes 與 paywall_open_total。其中 product 相關事件（product_1/5/10/30）代表你已累計建立相應數量的商品；同意註記事件（consent_shown、consent_yes）僅在取得你同意後才會傳送；而 paywall_open_total 僅為介面瀏覽熱度計數，非轉換分母。</li>
+        <li>day：事件發生的 UTC 日曆日期，格式為 YYYY-MM-DD。僅記錄日期，絕不含精準時間或時區。</li>
+        <li>app_version：事件記錄當下的 App 版本與組建編號，例如 1.6(18)。</li>
+        <li>country：App Store 商店國別代碼；若無法取得商店資訊，則為裝置地區代碼。</li>
+        <li>country_src：標註國別代碼的來源，值為「storefront」或「locale」其中之一。</li>
+        <li>tier：標註目前使用的方案等級，值為「free」（免費版）或「pro」（專業版）。</li>
+        <li>cohort：標註安裝組群，值為「new」（全新安裝）或「legacy」（此版本前已使用過的既有安裝）。</li>
+        <li>install_week：安裝後首次開啟 App 的 ISO 週別，例如 2026-W44。僅記錄週數，絕不記錄具體日期。</li>
+        <li>source：僅於 Pro 相關畫面與付費牆事件中附帶，值為「limit」、「insight_entry」、「intro」或「settings」其中之一；其餘事件一律省略此欄位。</li>
       </ul>
 
-      <h2>8. 安全</h2>
-      <p>有底採取本機優先、使用者主動匯出／匯入與受控恢復等方式降低資料外流與誤覆蓋風險。沒有任何儲存方式可以保證絕對安全，請為 iPhone 設定安全的螢幕鎖定，並妥善保管你匯出的 CSV 與完整備份檔。</p>
+      <h2>CSV 匯出、完整備份與檔案分享</h2>
+      <p>「有底」的核心庫存盤點、成本毛利計算、備份與匯出功能皆可在本機離線使用。你可以隨時將資料匯出為 CSV 試算表，或產生完整的 JSON 帳本備份檔案。</p>
+      <p>CSV 匯出、完整備份與分享動作，只有在你主動透過 iOS 系統分享面板或「檔案」介面操作時才會執行。你可以自行選擇將檔案儲存至「檔案」App、iCloud 雲碟、透過 AirDrop 傳送，或分享至第三方雲端空間與通訊軟體。</p>
+      <p>當檔案離開「有底」後，該檔案的儲存、傳輸與隱私保護將依據你所選取的第三方服務之服務條款與隱私權政策規範。</p>
 
-      <h2>9. 政策更新</h2>
-      <p>如果未來版本新增帳號、雲端同步、第三方分析、廣告、付款後端或其他會改變資料處理方式的功能，我們會依實際版本更新本政策及 App Store 的隱私揭露。</p>
+      <h2>從備份檔案還原帳目</h2>
+      <p>你可以隨時透過先前建立的完整備份檔案還原帳本。資料還原完全由你主動掌控：只有當你在 iOS 檔案選取器中親自挑選備份檔案時，App 才會讀取該檔案。</p>
+      <p>為避免意外覆蓋現有資料，「有底」在以備份檔案內容取代本機現存帳目之前，一定會向你顯示明確的確認提示，經你確認後才會執行還原。</p>
 
-      <h2>10. 聯絡方式</h2>
-      <p>若對隱私或資料處理有疑問，請寄信至：<a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a></p>
+      <h2>資料保留與刪除原則</h2>
+      <p>你的本機業務資料會持續保存在你的 iPhone 中，直到你在 App 內手動刪除特定項目、交易或帳本，或將 App 從手機中解除安裝。若你刪除「有底」，iOS 系統將永久移除該 App 的本機沙盒及其中的所有資料。</p>
+      <p>你先前匯出或備份至 App 外部的檔案，將持續保留於你所指定的儲存位置（如「檔案」App 或雲端硬碟），直到你自行手動刪除。</p>
+      <p>至於選擇性參與的體驗改進統計，伺服器端的聚合計數資料會由系統每日排程自動清除，最長保留不超過 13 個月。</p>
+
+      <h2>無第三方追蹤與廣告聲明</h2>
+      <p>我們堅持提供乾淨、專注的記帳工具。「有底」完全未串接任何第三方廣告 SDK、第三方行為分析 SDK 或任何商業追蹤套件。</p>
+      <p>我們絕不會跨其他公司的 App 或網站追蹤你的行為，絕不進行廣告追蹤，也絕不利用你的庫存、成本或銷售資料建立廣告個人畫像。</p>
+      <p>App 內唯一的統計項目，就是本政策所述的第一方選擇性體驗改進統計，且僅在取得你同意後以完全匿名的方式運作。</p>
+
+      <h2>資料安全防護</h2>
+      <p>我們透過本機優先（Local-first）的架構確保你的資訊安全：由於業務帳目直接儲存在你的 iPhone 本機而非外部雲端伺服器，因此免除了伺服器遭入侵或中央資料庫洩漏的風險。</p>
+      <p>你的 App 本機資料受到 iOS 內建資料保護機制的保護，特別是當你設定了裝置密碼時。你也可以使用 Face ID 或 Touch ID 來控制存取。為了確保資料安全，我們建議你將 iOS 保持在最新版本、設定高強度密碼，並妥善處理匯出的 CSV 與備份檔案。</p>
+      <p>請理解，儘管我們採取了周延的安全設計與防護措施，但任何數位儲存方式或電子傳輸管道皆無法保證百分之百絕對無虞。</p>
+
+      <h2>隱私權政策的修訂</h2>
+      <p>隨著「有底」功能的持續完善，我們可能會適時修訂本隱私權政策，以反映最新的功能調整、營運實務或法規要求。</p>
+      <p>若資料處理方式有任何實質變更，我們將更新本政策頂端的「最後更新」日期、同步修訂 App Store 上的隱私權標籤，並於版本更新說明或 App 內清楚公告。</p>
+
+      <h2>聯絡我們</h2>
+      <p>若你對本隱私權政策或「有底」的資料處理有任何疑問、建議或需要協助之處，歡迎透過電子郵件與我們聯繫：<a href="mailto:fivechaoice@gmail.com">fivechaoice@gmail.com</a>。我們很樂意為你提供解答。</p>
       <a class="back" href="../support/?lang=zh-Hant">前往有底支援頁面</a>
     </section>
   </article>
