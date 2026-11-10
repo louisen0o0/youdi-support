@@ -23,8 +23,8 @@
 
     <section data-lang="en">
       <h1>有底 Privacy Policy</h1>
-      <p class="meta">For 有底 1.6 (Build 18) | Last updated 5 November 2026</p>
-      <p class="lead">We built 有底 (InventoryLite) to help solo shop owners, market stall vendors, independent studios, and small sellers track inventory, stock movements, moving-average costs, and gross profits on iPhone without complication. Your business data belongs to you. This privacy policy explains in plain language what stays on your device, how exports and backups work, and how our optional product analytics feature in version 1.6 operates.</p>
+      <p class="meta">For 有底 1.6.2 (Build 21) | Last updated 10 November 2026</p>
+      <p class="lead">We built 有底 (InventoryLite) to help solo shop owners, market stall vendors, independent studios, and small sellers track inventory, stock movements, moving-average costs, and gross profits on iPhone without complication. Your business data belongs to you. This privacy policy explains in plain language what stays on your device, how exports and backups work, and how our optional product analytics feature in version 1.6.2 operates.</p>
 
       <h2>Business Records You Enter into the App</h2>
       <p>有底 (InventoryLite) is designed for solo shops, market stalls, independent studios, and small sellers to track inventory, stock-in and stock-out movements, moving-average costs, and gross profit. Depending on how you use the app, you may choose to enter business records such as books, items, variant details, supplier and customer names, stock transactions, quantities, unit prices, notes, and restock alert thresholds.</p>
@@ -33,20 +33,20 @@
       <h2>Where Your Data Lives: Local Storage on Your iPhone</h2>
       <p>You do not need an account or login to use 有底. The app is built specifically for iPhone running iOS 17 or later (there is no iPad support).</p>
       <p>All your core business records—including your ledger books, stock items, cost calculations, profit margins, and notes—are stored primarily in the app&#x27;s local storage directly on your iPhone. We do not provide or operate any cloud synchronization service for your ledger records, and we do not maintain a remote database containing your books.</p>
-      <p>The only developer-operated network endpoint in version 1.6 is our optional product analytics endpoint, which never receives, processes, or stores any of your business records.</p>
+      <p>The only developer-operated network endpoint in version 1.6.2 is our optional product analytics endpoint, which never receives, processes, or stores any of your business records.</p>
 
-      <h2>Optional Product Analytics in Version 1.6</h2>
-      <p>Version 1.6 includes one optional first-party analytics feature created solely to help us understand where users encounter friction or abandon the Pro purchase flow, allowing us to improve the app. It is completely off by default. The app never records, queues, or transmits any analytics data before you explicitly grant consent.</p>
-      <p>On your first launch of version 1.6, a one-time explanation sheet titled &quot;Help Us Improve the App&quot; asks whether you wish to agree or decline. This explanation is shown only once, and if you decline, your choice is remembered. You can change your mind at any time by navigating to Settings &gt; Privacy &gt; Help Improve App.</p>
+      <h2>Optional Product Analytics in Version 1.6.2</h2>
+      <p>Version 1.6.2 includes one optional first-party analytics feature created solely to help us understand where users encounter friction or abandon the Pro purchase flow, allowing us to improve the app. It is completely off by default. The app never records, queues, or transmits any analytics data before you explicitly grant consent.</p>
+      <p>On your first launch of version 1.6.2, a one-time explanation sheet titled &quot;Help Us Improve the App&quot; asks whether you wish to agree or decline. This explanation is shown only once, and if you decline, your choice is remembered. You can change your mind at any time by navigating to Settings &gt; Privacy &gt; Help Improve App.</p>
       <p>If you turn the switch off, the app immediately ceases recording events, removes any unsent events queued on your iPhone, and cancels any network request in progress. Turning off or declining analytics will never limit, alter, or revoke any app feature or purchased rights. The app remains fully functional, and you can opt back in at any time.</p>
       <p>When enabled, analytics events are transmitted over HTTPS POST to <a href="https://a21-funnel.fivechaoice.workers.dev/a21/funnel">https://a21-funnel.fivechaoice.workers.dev/a21/funnel</a>. This endpoint runs on Cloudflare Workers backed by a Cloudflare D1 database, where Cloudflare processes requests on our behalf. The endpoint returns an HTTP 204 status with no response body. If your device is offline, the app queues events locally (up to 500 events; the oldest are dropped if the limit is exceeded) and transmits them in chronological order once an internet connection is established. Delivered events are immediately deleted from your local queue.</p>
       <p>The analytics events we collect are strictly anonymous and are never linked to your personal identity. We do not collect or transmit device identifiers, user identifiers, installation UUIDs, IDFA, IDFV, Apple IDs, email addresses, phone numbers, location coordinates, photos, contacts, microphone audio, or clipboard content. The endpoint does not log or store IP addresses, User-Agent strings, or cookies. We never use analytics data for advertising, cross-app tracking, or cross-site tracking, we do not build advertising profiles, and we never sell your data to third parties.</p>
       <p>On our server, we store only aggregated counter rows keyed by the dimension combination: date × event × source × app version × country × country source × free/pro tier × new/legacy cohort × install week. There is no database table for raw events, request payloads, IP addresses, User-Agents, or cookies. A daily automated maintenance task permanently deletes server counter rows older than 13 months. Because server rows consist exclusively of aggregate counts untied to any personal identifier, we cannot isolate, look up, or delete past counts for any individual person. Turning the analytics switch off stops all future collection and purges any unsent data from your device.</p>
       <p>Below is the complete whitelist of exact fields that can be sent when you opt in. No other fields are ever transmitted:</p>
       <ul>
-        <li>event: The name of the specific in-app step. Supported events are first_open, product_1, product_5, product_10, product_30, limit_hit_first, pro_seen_first, paywall_open_first, purchase_start_first, purchase_success, purchase_cancel_first, purchase_fail_first, restore_success, consent_shown, consent_yes, and paywall_open_total. Product count events (product_1/5/10/30) indicate you have recorded that number of products; consent bookkeeping events (consent_shown, consent_yes) are only ever transmitted after consent is granted; and paywall_open_total represents an overall heat count rather than a conversion denominator.</li>
+        <li>event: The name of the specific in-app step. Supported events are first_open, product_1, product_5, product_10, product_30, limit_hit_first, pro_seen_first, paywall_open_first, purchase_start_first, purchase_success, purchase_cancel_first, purchase_fail_first, restore_success, consent_shown, consent_yes, paywall_open_total, ret_d7_open, ret_d30_open, ret_d7_record, ret_d30_record, paywall_q_shown, paywall_q_price, paywall_q_notyet, paywall_q_unclear, and paywall_q_skip. Product count events (product_1/5/10/30) indicate you have recorded that number of products; consent bookkeeping events (consent_shown, consent_yes) are only ever transmitted after consent is granted; paywall_open_total represents an overall heat count rather than a conversion denominator; retention events (ret_d7_open, ret_d30_open, ret_d7_record, ret_d30_record) record only whether the app was opened or a transaction was recorded within the day 7–13 and day 30–36 windows, at most once per install with no transaction details; and paywall question events (paywall_q_shown, paywall_q_price, paywall_q_notyet, paywall_q_unclear, paywall_q_skip) record a one-time question impression and selection when dismissing the paywall, containing no information beyond the selected choice.</li>
         <li>day: The UTC calendar date when the event occurred, formatted as YYYY-MM-DD. Only the calendar day is transmitted—never an exact time or time zone.</li>
-        <li>app_version: The app version and build number when the event was recorded, for example 1.6(18).</li>
+        <li>app_version: The app version and build number when the event was recorded, for example 1.6.2(21).</li>
         <li>country: The App Store storefront country code, or the device region code if the storefront code is unavailable.</li>
         <li>country_src: Indicates the source of the country code, with a value of either &quot;storefront&quot; or &quot;locale&quot;.</li>
         <li>tier: Indicates your current app tier, with a value of either &quot;free&quot; or &quot;pro&quot;.</li>
@@ -54,6 +54,8 @@
         <li>install_week: The ISO calendar week of the app&#x27;s first launch after installation, for example 2026-W44. Only the week is transmitted, never the exact day.</li>
         <li>source: Transmitted solely for Pro-screen and paywall events, with a value of &quot;limit&quot;, &quot;insight_entry&quot;, &quot;intro&quot;, or &quot;settings&quot;. This field is omitted for all other events.</li>
       </ul>
+      <p>In version 1.6.2, our optional anonymous usage statistics introduce two new event categories: retention checks and paywall exit feedback. Retention events record whether the app was opened or a transaction was saved during the day 7–13 and day 30–36 windows, strictly limited to once per install with no ledger details. Paywall feedback events present a single question when a free user cancels the paywall, counting one of four selections to help us understand onboarding friction. Consistent with our privacy principles, these metrics are disabled by default, require your explicit consent, and can be disabled anytime in Settings. They are never linked to personal identity, never used for tracking or advertising, and never collect ledger entries, amounts, products, or device identifiers.</p>
+
 
       <h2>CSV Export, Full Backups, and File Sharing</h2>
       <p>All core inventory, stock tracking, cost calculation, backup, and export features work locally and offline. You can export your data to CSV spreadsheets or create a full JSON ledger backup whenever you wish.</p>
@@ -90,8 +92,8 @@
 
     <section data-lang="zh-Hant">
       <h1>有底隱私權政策</h1>
-      <p class="meta">適用版本：有底 1.6（Build 18）｜最後更新：2026 年 11 月 5 日</p>
-      <p class="lead">我們開發「有底」（InventoryLite），是為了讓個人店家、市集攤主、手作工作室與獨立賣家能在 iPhone 上俐落管理庫存、進出貨、移動加權平均成本與掌握毛利。你的生意資料完全屬於你。這份隱私權政策以清楚、坦誠的方式，說明你的帳目資料如何保存在本機、備份與匯出的運作機制，以及 1.6 版本中選擇性加入的產品體驗改進統計。</p>
+      <p class="meta">適用版本：有底 1.6.2（Build 21）｜最後更新：2026 年 11 月 10 日</p>
+      <p class="lead">我們開發「有底」（InventoryLite），是為了讓個人店家、市集攤主、手作工作室與獨立賣家能在 iPhone 上俐落管理庫存、進出貨、移動加權平均成本與掌握毛利。你的生意資料完全屬於你。這份隱私權政策以清楚、坦誠的方式，說明你的帳目資料如何保存在本機、備份與匯出的運作機制，以及 1.6.2 版本中選擇性加入的產品體驗改進統計。</p>
 
       <h2>你在 App 中記錄的業務資料</h2>
       <p>「有底」（InventoryLite）專為日常進銷存管理而設計。在使用過程中，你可能會在 App 內建立各項業務帳目，例如帳本、商品名稱、款式規格、廠商與客戶名稱、進出貨紀錄、交易數量、進貨單價與售價、備註說明，以及庫存警示門檻。</p>
@@ -100,20 +102,20 @@
       <h2>資料儲存位置：你的 iPhone 本機</h2>
       <p>使用「有底」無須註冊任何帳號，也不需要登入。本 App 專為搭載 iOS 17 或更新版本的 iPhone 設計（未提供 iPad 版本）。</p>
       <p>你的所有核心業務紀錄——包括帳本、商品庫存、進出貨紀錄、成本計算、毛利與備註——皆主要保存在你 iPhone 的本機應用程式儲存空間中。開發者並未提供亦未營運任何帳本雲端同步服務，我們也沒有儲存你業務帳目的中央伺服器。</p>
-      <p>在 1.6 版本中，唯一的開發者自營網路端點是選擇性的體驗改進統計端點，且該端點絕不會接收、處理或儲存任何業務帳目資料。</p>
+      <p>在 1.6.2 版本中，唯一的開發者自營網路端點是選擇性的體驗改進統計端點，且該端點絕不會接收、處理或儲存任何業務帳目資料。</p>
 
-      <h2>1.6 版本選擇性參與的產品體驗改進統計</h2>
-      <p>為了了解使用者在 Pro 方案探索與購買流程中於哪些環節遇到阻礙，進而持續改良 App 體驗，「有底」在 1.6 版本中加入了選擇性的第一方統計功能。此功能預設為關閉狀態。在你明確同意啟用之前，App 絕不會記錄、排隊或傳送任何統計資料。</p>
-      <p>當你首次開啟 1.6 版本時，App 會顯示一次性說明頁面「協助我們把「有底」做得更好用」，邀請你決定是否同意參與。該說明僅顯示一次；若你選擇婉拒，系統會記住你的選擇，不再主動打擾。你可以隨時在「設定 &gt; 隱私與改進 &gt; 協助改進 App」開啟或關閉此功能。</p>
+      <h2>1.6.2 版本選擇性參與的產品體驗改進統計</h2>
+      <p>為了了解使用者在 Pro 方案探索與購買流程中於哪些環節遇到阻礙，進而持續改良 App 體驗，「有底」在 1.6.2 版本中加入了選擇性的第一方統計功能。此功能預設為關閉狀態。在你明確同意啟用之前，App 絕不會記錄、排隊或傳送任何統計資料。</p>
+      <p>當你首次開啟 1.6.2 版本時，App 會顯示一次性說明頁面「協助我們把「有底」做得更好用」，邀請你決定是否同意參與。該說明僅顯示一次；若你選擇婉拒，系統會記住你的選擇，不再主動打擾。你可以隨時在「設定 &gt; 隱私與改進 &gt; 協助改進 App」開啟或關閉此功能。</p>
       <p>若你關閉此開關，App 會立即停止記錄事件、清空 iPhone 本機上所有排隊待傳送的事件，並取消正在進行中的網路請求。婉拒或關閉此統計開關絕不會影響任何 App 功能或你已購買的權益，所有功能皆維持正常使用，日後亦可隨時重新開啟。</p>
       <p>啟用統計後，事件會透過 HTTPS POST 傳送至 <a href="https://a21-funnel.fivechaoice.workers.dev/a21/funnel">https://a21-funnel.fivechaoice.workers.dev/a21/funnel</a>。此端點運行於 Cloudflare Workers，後端搭配 Cloudflare D1 資料庫，由 Cloudflare 代表開發者處理請求，並回傳 HTTP 204 無內文狀態。若裝置處於離線狀態，App 會將事件暫存於本機佇列（上限為 500 筆，若額滿則自動優先丟棄最舊記錄），待網路連線恢復後依序送出；傳送成功的事件會立即自本機佇列刪除。</p>
       <p>我們收集的統計事件純屬匿名，絕不與你的個人身分連結。我們不收集亦不傳送任何裝置識別碼、使用者識別碼、安裝 UUID、IDFA、IDFV、Apple ID、電子郵件、電話號碼、地理位置座標、相簿照片、通訊錄、麥克風錄音或剪貼簿內容。端點亦不記錄或儲存 IP 位址、User-Agent 字串或 Cookie。我們絕不將資料用於廣告投放、跨 App 或跨網站追蹤，不建立廣告畫像，也絕不向第三方販售資料。</p>
       <p>在伺服器端，我們僅儲存交叉統計後的聚合計數列，維度包含：日期 × 事件 × 來源 × App 版本 × 國別 × 國別來源 × 免費/Pro 方案 × 新舊組群 × 安裝週別。資料庫中完全沒有原始事件記錄、請求內文、IP 位址、User-Agent 或 Cookie 的資料表。每日的自動排程維護作業會自動刪除超過 13 個月的過期計數列。由於伺服器端僅保存去識別化的整體計數數字，不含任何可識別特定個人的標記，因此我們無法單獨篩選、調閱或刪除特定使用者過去的統計計數。關閉 App 內的開關可立即停止未來的資料收集，並清空你手機上所有未傳送的事件。</p>
       <p>以下為同意啟用時傳送的完整白名單欄位，絕不包含其他任何欄位，供你檢視查核：</p>
       <ul>
-        <li>event：App 內部操作步驟名稱。支援的事件包含 first_open、product_1、product_5、product_10、product_30、limit_hit_first、pro_seen_first、paywall_open_first、purchase_start_first、purchase_success、purchase_cancel_first、purchase_fail_first、restore_success、consent_shown、consent_yes 與 paywall_open_total。其中 product 相關事件（product_1/5/10/30）代表你已累計建立相應數量的商品；同意註記事件（consent_shown、consent_yes）僅在取得你同意後才會傳送；而 paywall_open_total 僅為介面瀏覽熱度計數，非轉換分母。</li>
+        <li>event：App 內部操作步驟名稱。支援的事件包含 first_open、product_1、product_5、product_10、product_30、limit_hit_first、pro_seen_first、paywall_open_first、purchase_start_first、purchase_success、purchase_cancel_first、purchase_fail_first、restore_success、consent_shown、consent_yes、paywall_open_total、ret_d7_open、ret_d30_open、ret_d7_record、ret_d30_record、paywall_q_shown、paywall_q_price、paywall_q_notyet、paywall_q_unclear 與 paywall_q_skip。其中 product 相關事件（product_1/5/10/30）代表你已累計建立相應數量的商品；同意註記事件（consent_shown、consent_yes）僅在取得你同意後才會傳送；paywall_open_total 僅為介面瀏覽熱度計數，非轉換分母；留存事件（ret_d7_open、ret_d30_open、ret_d7_record、ret_d30_record）僅在安裝後第 7–13 天與第 30–36 天窗口內各記錄一次是否開啟或是否記下一筆交易，每安裝各記一次且不含任何帳目內容；而付費牆問卷事件（paywall_q_shown、paywall_q_price、paywall_q_notyet、paywall_q_unclear、paywall_q_skip）僅在免費使用者取消離開付費牆時每安裝詢問並計數一次，不含具體選項外的任何資料。</li>
         <li>day：事件發生的 UTC 日曆日期，格式為 YYYY-MM-DD。僅記錄日期，絕不含精準時間或時區。</li>
-        <li>app_version：事件記錄當下的 App 版本與組建編號，例如 1.6(18)。</li>
+        <li>app_version：事件記錄當下的 App 版本與組建編號，例如 1.6.2(21)。</li>
         <li>country：App Store 商店國別代碼；若無法取得商店資訊，則為裝置地區代碼。</li>
         <li>country_src：標註國別代碼的來源，值為「storefront」或「locale」其中之一。</li>
         <li>tier：標註目前使用的方案等級，值為「free」（免費版）或「pro」（專業版）。</li>
@@ -121,6 +123,8 @@
         <li>install_week：安裝後首次開啟 App 的 ISO 週別，例如 2026-W44。僅記錄週數，絕不記錄具體日期。</li>
         <li>source：僅於 Pro 相關畫面與付費牆事件中附帶，值為「limit」、「insight_entry」、「intro」或「settings」其中之一；其餘事件一律省略此欄位。</li>
       </ul>
+      <p>在 1.6.2 版本中，「可選匿名使用統計」新增了兩類事件：留存指標與付費牆單選反饋。留存事件僅在安裝後的第 7–13 天與第 30–36 天兩個時間窗口內，各記錄一次 App 是否開啟及是否成功記下一筆交易，每安裝至多記錄一次；付費牆單選反饋則在免費使用者點擊取消離開付費牆時顯示一次選擇框，記錄四個選項之一，用於了解使用上的卡點。這兩類新增事件遵循與既有統計完全一致的規則：預設關閉、須經你明確同意、可隨時在「設定」中關閉。所有統計皆為匿名且不與身分關聯，絕不用於廣告或追蹤，亦絕不傳送任何帳目內容、金額、商品或裝置識別碼。</p>
+
 
       <h2>CSV 匯出、完整備份與檔案分享</h2>
       <p>「有底」的核心庫存盤點、成本毛利計算、備份與匯出功能皆可在本機離線使用。你可以隨時將資料匯出為 CSV 試算表，或產生完整的 JSON 帳本備份檔案。</p>
